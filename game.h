@@ -14,7 +14,7 @@ namespace ygo {
 struct Config {
 	bool use_d3d;
 	bool use_image_scale;
-	unsigned short antialias;
+	unsigned short antialias;         //反锯齿
 	unsigned short serverport;
 	unsigned char textfontsize;
 	wchar_t lasthost[100];
@@ -146,7 +146,7 @@ public:
 	void WaitFrameSignal(int frame);
 	void DrawThumb(code_pointer cp, position2di pos, const std::unordered_map<int,int>* lflist, bool drag = false);
 	void DrawDeckBd();
-	void LoadConfig();
+	void LoadConfig();        //读取配置文件system.conf
 	void SaveConfig();
 	void ShowCardInfo(int code, bool resize = false);
 	void ClearCardInfo(int player = 0);

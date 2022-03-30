@@ -9,7 +9,7 @@
 
 namespace ygo {
 
-static int parse_filter(const wchar_t* pstr, unsigned int* type) {
+static int parse_filter(const wchar_t* pstr, unsigned int* type) {   //±È½Ï·ûºÅ×ª»»
 	if(*pstr == L'=') {
 		*type = 1;
 		return BufferIO::GetVal(pstr + 1);
